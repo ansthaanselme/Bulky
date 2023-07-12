@@ -28,9 +28,11 @@ namespace BulkyWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                return RedirectToAction("Index");
             }
             
-            return RedirectToAction("Index");
+            return View();
+            
         }
 
     }
